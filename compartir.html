@@ -8,17 +8,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-
-    <!-- =========================================
-         INFORMACIÓN GENERAL
-    ========================================== -->
-
     <title>Baby Shower Ana Sofía 💜</title>
 
 
-    <!-- =========================================
+    <!-- ==============================
          OPEN GRAPH — WHATSAPP
-    ========================================== -->
+    =============================== -->
 
     <meta property="og:title"
           content="Baby Shower Ana Sofía 💜">
@@ -32,10 +27,7 @@
     <meta property="og:url"
           content="https://srobledog97.github.io/compartir.html">
 
-
-    <!-- =========================================
-         IMAGEN DE VISTA PREVIA
-    ========================================== -->
+    <!-- IMAGEN DE VISTA PREVIA -->
 
     <meta property="og:image"
           content="https://srobledog97.github.io/preview.jpg">
@@ -56,9 +48,9 @@
           content="Baby Shower Ana Sofía">
 
 
-    <!-- =========================================
+    <!-- ==============================
          TWITTER / REDES SOCIALES
-    ========================================== -->
+    =============================== -->
 
     <meta name="twitter:card"
           content="summary_large_image">
@@ -73,9 +65,9 @@
           content="https://srobledog97.github.io/preview.jpg">
 
 
-    <!-- =========================================
-         ESTILO DE LA PÁGINA DE TRANSICIÓN
-    ========================================== -->
+    <!-- ==============================
+         ESTILO
+    =============================== -->
 
     <style>
 
@@ -123,7 +115,6 @@
 
 <body>
 
-
     <div class="contenedor">
 
         <img
@@ -136,9 +127,11 @@
 
     <script>
 
-        /* =========================================
-           OBTENER INVITADO DE LA URL
-        ========================================== */
+        /*
+        ==================================================
+        OBTENER EL INVITADO
+        ==================================================
+        */
 
         const parametros =
             new URLSearchParams(
@@ -146,14 +139,22 @@
             );
 
 
-        let invitado =
+        const invitado =
             parametros.get("invitado");
 
 
-        /* =========================================
-           SI EXISTE UN INVITADO,
-           REDIRIGIR A SU INVITACIÓN
-        ========================================== */
+        /*
+        ==================================================
+        REDIRECCIÓN
+        ==================================================
+
+        El parámetro "invitado" solamente sirve
+        para llevar a la persona a su invitación
+        personalizada.
+
+        La vista previa de WhatsApp permanece
+        siempre utilizando preview.jpg.
+        */
 
         if (invitado) {
 
@@ -161,19 +162,11 @@
 
                 window.location.href =
                     "index.html?invitado=" +
-                    encodeURIComponent(
-                        invitado
-                    );
+                    encodeURIComponent(invitado);
 
             }, 800);
 
         }
-
-
-        /* =========================================
-           SI NO HAY INVITADO,
-           IR A LA INVITACIÓN GENERAL
-        ========================================== */
 
         else {
 
@@ -187,7 +180,6 @@
         }
 
     </script>
-
 
 </body>
 
