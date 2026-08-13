@@ -1,271 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no,
+                   viewport-fit=cover">
 
     <title>Baby Shower Ana Sofía 💜</title>
 
     <meta name="description"
-          content="Invitación al Baby Shower de Ana Sofía 💜">
+          content="Invitación Baby Shower Ana Sofía">
 
     <meta property="og:title"
           content="Baby Shower Ana Sofía 💜">
 
     <meta property="og:description"
-          content="Tenemos una invitación muy especial para ti.">
-
-    <meta property="og:type"
-          content="website">
+          content="Invitación especial">
 
     <style>
 
-        /* ================================
+        /* =====================================
            CONFIGURACIÓN GENERAL
-        ================================= */
+        ====================================== */
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html,
         body {
             width: 100%;
-            min-height: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #12091d;
         }
 
         body {
-            background: #12091d;
-            font-family: Georgia, "Times New Roman", serif;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            overflow-x: hidden;
+            align-items: center;
         }
 
-        /* ================================
-           CONTENEDOR PRINCIPAL
-        ================================= */
+
+        /* =====================================
+           CONTENEDOR DE LA INVITACIÓN
+        ====================================== */
 
         .invitacion {
-            position: relative;
-            width: 100%;
-            max-width: 700px;
-            line-height: 0;
 
-            animation: aparecer 1.2s ease-out;
+            position: relative;
+
+            width: 100vw;
+            height: 100dvh;
+
+            overflow: hidden;
+
+            animation: entrada 0.8s ease-out;
+
         }
 
-        /* Imagen principal */
+
+        /* =====================================
+           IMAGEN
+        ====================================== */
 
         .invitacion img {
-            display: block;
+
+            position: absolute;
+
             width: 100%;
-            height: auto;
-            border: 0;
+            height: 100%;
+
+            left: 0;
+            top: 0;
+
+            /*
+              Fill permite que la invitación
+              ocupe toda la pantalla.
+            */
+
+            object-fit: fill;
+
+            display: block;
+
         }
 
-        /* ================================
-           BOTONES INTERACTIVOS
-        ================================= */
 
-        .boton {
+        /* =====================================
+           ZONAS TÁCTILES INVISIBLES
+        ====================================== */
+
+        .zona-boton {
+
             position: absolute;
 
             left: 50%;
+
             transform: translateX(-50%);
-
-            width: 32%;
-            min-width: 190px;
-            max-width: 270px;
-
-            height: auto;
-            min-height: 52px;
-
-            border-radius: 35px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 10px;
-
-            text-decoration: none;
-
-            color: white;
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-
-            letter-spacing: 0.2px;
-
-            box-shadow:
-                0 5px 12px rgba(0, 0, 0, 0.25);
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                filter 0.2s ease;
 
             z-index: 10;
 
-            line-height: normal;
+            display: block;
+
+            /*
+              IMPORTANTE:
+              El botón es transparente.
+              El diseño que ves pertenece
+              directamente a la imagen.
+            */
+
+            background: transparent;
+
+            border: none;
+
+            outline: none;
+
+            -webkit-tap-highlight-color: transparent;
+
+            cursor: pointer;
+
         }
 
-        /* Botón ubicación */
 
-        .mapa {
-            bottom: 14.8%;
+        /* =====================================
+           BOTÓN VER UBICACIÓN
+        ====================================== */
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #8b4bd9,
-                    #6221a8
-                );
+        .ubicacion {
+
+            width: 34%;
+
+            height: 5.3%;
+
+            bottom: 14.3%;
+
         }
 
-        /* Botón WhatsApp */
 
-        .whatsapp {
-            bottom: 8.7%;
+        /* =====================================
+           BOTÓN CONFIRMAR ASISTENCIA
+        ====================================== */
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #8b4bd9,
-                    #6221a8
-                );
+        .confirmar {
+
+            width: 34%;
+
+            height: 5.3%;
+
+            bottom: 8.3%;
+
         }
 
-        /* Iconos */
 
-        .icono {
-            font-size: 25px;
-            line-height: 1;
+        /* =====================================
+           EFECTO AL TOCAR
+        ====================================== */
+
+        .zona-boton:active {
+
+            background: rgba(255,255,255,0.08);
+
+            border-radius: 40px;
+
         }
 
-        /* Efecto al tocar */
 
-        .boton:hover {
-            transform: translateX(-50%) translateY(-2px);
-            box-shadow:
-                0 8px 18px rgba(0, 0, 0, 0.35);
-            filter: brightness(1.08);
-        }
+        /* =====================================
+           ANIMACIÓN DE ENTRADA
+        ====================================== */
 
-        .boton:active {
-            transform: translateX(-50%) scale(0.96);
-        }
-
-        /* ================================
-           ANIMACIONES
-        ================================= */
-
-        @keyframes aparecer {
+        @keyframes entrada {
 
             from {
+
                 opacity: 0;
-                transform: scale(0.97);
+
+                transform: scale(0.98);
+
             }
 
             to {
+
                 opacity: 1;
+
                 transform: scale(1);
+
             }
 
         }
 
-        /* Animación independiente de botones */
 
-        .boton {
-            animation: subir 1s ease-out 0.7s both;
-        }
+        /* =====================================
+           PANTALLAS MUY PEQUEÑAS
+        ====================================== */
 
-        @keyframes subir {
+        @media (max-height: 650px) {
 
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(15px);
+            .ubicacion {
+
+                bottom: 14.2%;
+
             }
 
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
+            .confirmar {
 
-        }
+                bottom: 8.2%;
 
-        /* ================================
-           CELULARES
-        ================================= */
-
-        @media (max-width: 600px) {
-
-            body {
-                background: #12091d;
-            }
-
-            .invitacion {
-                width: 100%;
-                max-width: 700px;
-            }
-
-            .boton {
-
-                width: 34%;
-
-                min-width: 180px;
-
-                min-height: 48px;
-
-                font-size: 13px;
-
-                gap: 7px;
-            }
-
-            .icono {
-                font-size: 22px;
             }
 
         }
 
-        /* ================================
-           CELULARES PEQUEÑOS
-        ================================= */
 
-        @media (max-width: 390px) {
+        /* =====================================
+           PANTALLAS ALTAS
+        ====================================== */
 
-            .boton {
+        @media (min-height: 850px) {
 
-                min-width: 165px;
+            .ubicacion {
 
-                min-height: 44px;
+                bottom: 14.4%;
 
-                font-size: 12px;
             }
 
-            .icono {
-                font-size: 20px;
+            .confirmar {
+
+                bottom: 8.4%;
+
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
     <main class="invitacion">
 
+
         <!-- =================================
-             INVITACIÓN
+             IMAGEN ORIGINAL
         ================================== -->
 
         <img
@@ -275,44 +261,34 @@
 
 
         <!-- =================================
-             BOTÓN GOOGLE MAPS
+             ÁREA INVISIBLE GOOGLE MAPS
         ================================== -->
 
         <a
-            class="boton mapa"
+            class="zona-boton ubicacion"
             href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20Social%20Punto%20Rojo"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Ver ubicación en Google Maps"
-        >
-
-            <span class="icono">📍</span>
-
-            <span>VER UBICACIÓN</span>
-
-        </a>
+            aria-label="Ver ubicación"
+        ></a>
 
 
         <!-- =================================
-             BOTÓN WHATSAPP
+             ÁREA INVISIBLE WHATSAPP
         ================================== -->
 
         <a
-            class="boton whatsapp"
+            class="zona-boton confirmar"
             href="https://wa.me/?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Ana%20Sof%C3%ADa%20%F0%9F%92%9C"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Confirmar asistencia por WhatsApp"
-        >
+            aria-label="Confirmar asistencia"
+        ></a>
 
-            <span class="icono">♡</span>
-
-            <span>CONFIRMAR ASISTENCIA</span>
-
-        </a>
 
     </main>
 
 
 </body>
+
 </html>
