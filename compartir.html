@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0">
+
+
+    <!-- =========================================
+         VISTA PREVIA DE WHATSAPP
+    ========================================== -->
+
+    <title>Baby Shower Ana Sofía 💜</title>
+
+    <meta property="og:title"
+          content="Baby Shower Ana Sofía 💜">
+
+    <meta property="og:description"
+          content="Tenemos una invitación muy especial para ti 💜">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:image"
+          content="https://srobledog97.github.io/Invitacion.png">
+
+    <meta property="og:image:secure_url"
+          content="https://srobledog97.github.io/Invitacion.png">
+
+    <meta property="og:image:type"
+          content="image/png">
+
+    <meta property="og:image:alt"
+          content="Invitación Baby Shower Ana Sofía">
+
+    <meta property="og:image:width"
+          content="1200">
+
+    <meta property="og:image:height"
+          content="1600">
+
+
+    <!-- =========================================
+         TWITTER / X
+    ========================================== -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Baby Shower Ana Sofía 💜">
+
+    <meta name="twitter:description"
+          content="Tenemos una invitación muy especial para ti 💜">
+
+    <meta name="twitter:image"
+          content="https://srobledog97.github.io/Invitacion.png">
+
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #12091c;
+
+        }
+
+
+        img {
+
+            max-width: 90%;
+
+            max-height: 90vh;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <img
+        src="Invitacion.png"
+        alt="Baby Shower Ana Sofía 💜"
+    >
+
+
+    <script>
+
+        /*
+         * Tomamos el invitado de la URL.
+         */
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const invitado =
+            parametros.get("invitado");
+
+
+        /*
+         * Después de abrir la página,
+         * enviamos al usuario a la
+         * invitación real.
+         */
+
+        if (invitado) {
+
+            setTimeout(function () {
+
+                window.location.href =
+                    "index.html?invitado=" +
+                    encodeURIComponent(
+                        invitado
+                    );
+
+            }, 800);
+
+        } else {
+
+            setTimeout(function () {
+
+                window.location.href =
+                    "index.html";
+
+            }, 800);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
