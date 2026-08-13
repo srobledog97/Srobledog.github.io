@@ -93,85 +93,49 @@
            NOMBRE DEL INVITADO
         =========================================== */
 
-        .nombre-invitado {
+        ..nombre-invitado {
 
-            position: absolute;
+    position: absolute;
 
-            /*
-             * Esta posición es provisional.
-             * Después de ver la prueba podemos
-             * moverla unos píxeles hasta que quede
-             * exactamente donde queremos.
-             */
+    left: 50%;
+    top: 68.8%;
 
-            left: 50%;
-            top: 64.5%;
+    transform: translateX(-50%);
 
-            transform: translateX(-50%);
+    width: 86%;
 
-            width: 80%;
+    text-align: center;
 
-            text-align: center;
+    color: #5b277d;
 
-            color: #6d4382;
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        "Lucida Handwriting",
+        cursive;
 
-            font-family: Georgia,
-                         "Times New Roman",
-                         serif;
+    font-size: clamp(22px, 5vw, 34px);
 
-            font-size: clamp(18px, 4.2vw, 30px);
+    font-weight: 500;
 
-            font-weight: bold;
+    line-height: 1.15;
 
-            line-height: 1.2;
+    white-space: normal;
 
-            text-shadow:
-                0 1px 1px rgba(255,255,255,0.6);
+    text-shadow:
+        0 1px 1px rgba(255,255,255,0.45);
 
-            z-index: 15;
+    z-index: 15;
 
-            /*
-             * Inicialmente oculto hasta que
-             * JavaScript encuentre el nombre.
-             */
+    opacity: 0;
 
-            opacity: 0;
-
-            transition: opacity 0.5s ease;
-
-        }
-
-
-        .nombre-invitado.visible {
-            opacity: 1;
+    transition: opacity 0.5s ease;
         }
 
 
         /* ==========================================
            TEXTO "CON CARIÑO PARA"
         =========================================== */
-
-        .texto-invitado {
-
-            display: block;
-
-            margin-bottom: 5px;
-
-            font-family: Arial,
-                         Helvetica,
-                         sans-serif;
-
-            font-size: clamp(11px, 2.5vw, 15px);
-
-            font-weight: normal;
-
-            letter-spacing: 1px;
-
-            color: #8a668f;
-
-            text-transform: uppercase;
-
-        }
 
 
         /* ==========================================
