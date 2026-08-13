@@ -42,24 +42,19 @@
 
         html,
         body {
-
             width: 100%;
             min-height: 100%;
-
         }
 
 
         body {
-
             background: #12091c;
-
             overflow-x: hidden;
-
         }
 
 
         /* =====================================
-           CONTENEDOR DE LA INVITACIÓN
+           INVITACIÓN
            ===================================== */
 
         .invitacion {
@@ -101,14 +96,19 @@
             position: absolute;
 
             /*
-             * Ubicación del nombre
+             * POSICIÓN DEL NOMBRE
+             *
+             * Esta es la zona donde debe
+             * aparecer el nombre del invitado.
              */
 
-            top: 67.3%;
+            top: 55.2%;
 
-            left: 4%;
+            left: 3%;
 
-            width: 92%;
+            width: 94%;
+
+            padding: 0 5px;
 
             text-align: center;
 
@@ -121,17 +121,18 @@
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(
-                18px,
-                4.4vw,
-                29px
-            );
+            font-size:
+                clamp(
+                    18px,
+                    4.5vw,
+                    29px
+                );
 
             font-weight: bold;
 
             text-shadow:
                 0 1px 1px
-                rgba(255,255,255,0.5);
+                rgba(255,255,255,0.55);
 
             z-index: 5;
 
@@ -141,30 +142,24 @@
 
 
         /* =====================================
-           ÁREA TRANSPARENTE GOOGLE MAPS
+           BOTÓN INVISIBLE DE GOOGLE MAPS
            
-           NO SE VE.
-           
-           SOLAMENTE HACE CLICKEABLE
-           EL BOTÓN QUE YA ESTÁ EN LA IMAGEN.
+           NO CAMBIA SU APARIENCIA.
+           SOLO HACE CLICKEABLE EL BOTÓN
+           QUE YA ESTÁ DENTRO DE LA IMAGEN.
            ===================================== */
 
         .boton-maps {
 
             position: absolute;
 
-            /*
-             * Posición aproximada del botón
-             * original de la imagen.
-             */
+            top: 76.1%;
 
-            top: 76.2%;
+            left: 29%;
 
-            left: 30%;
+            width: 42%;
 
-            width: 40%;
-
-            height: 5.5%;
+            height: 5.7%;
 
             z-index: 10;
 
@@ -183,22 +178,20 @@
 
 
         /* =====================================
-           ÁREA TRANSPARENTE WHATSAPP
-           
-           TAMPOCO SE VE.
+           BOTÓN INVISIBLE DE WHATSAPP
            ===================================== */
 
         .boton-whatsapp {
 
             position: absolute;
 
-            top: 82.2%;
+            top: 82.1%;
 
-            left: 30%;
+            left: 29%;
 
-            width: 40%;
+            width: 42%;
 
-            height: 5.5%;
+            height: 5.7%;
 
             z-index: 10;
 
@@ -217,14 +210,14 @@
 
 
         /* =====================================
-           TELÉFONOS PEQUEÑOS
+           PANTALLAS PEQUEÑAS
            ===================================== */
 
         @media (max-width: 500px) {
 
             .nombre-invitado {
 
-                top: 67.3%;
+                top: 55.2%;
 
                 left: 3%;
 
@@ -239,6 +232,12 @@
 
             }
 
+
+            /*
+             * IMPORTANTE:
+             * NO MODIFICAMOS LAS ZONAS
+             * DE LOS BOTONES.
+             */
 
             .boton-maps {
 
@@ -268,10 +267,6 @@
         }
 
 
-        /* =====================================
-           TELÉFONOS MUY PEQUEÑOS
-           ===================================== */
-
         @media (max-width: 360px) {
 
             .nombre-invitado {
@@ -294,7 +289,7 @@
 
 
         <!-- =================================
-             IMAGEN COMPLETA
+             IMAGEN DE LA INVITACIÓN
              ================================= -->
 
         <img
@@ -307,7 +302,7 @@
         <!-- =================================
              NOMBRE PERSONALIZADO
              
-             NO HAY "CON CARIÑO PARA:"
+             NO EXISTE "CON CARIÑO PARA:"
              ================================= -->
 
         <div
@@ -317,8 +312,7 @@
 
 
         <!-- =================================
-             BOTÓN INVISIBLE SOBRE
-             EL BOTÓN ORIGINAL
+             GOOGLE MAPS
              ================================= -->
 
         <a
@@ -331,8 +325,7 @@
 
 
         <!-- =================================
-             BOTÓN INVISIBLE SOBRE
-             EL BOTÓN ORIGINAL
+             WHATSAPP
              ================================= -->
 
         <a
@@ -349,9 +342,16 @@
 
     <script>
 
+        /* =====================================
+           NOMBRE PREDETERMINADO PARA LA PRUEBA
+           ===================================== */
+
+        const nombrePrueba =
+            "Flia. Montoya Agudelo";
+
 
         /* =====================================
-           OBTENER INVITADO DESDE LA URL
+           LEER EL NOMBRE DESDE EL ENLACE
            ===================================== */
 
         const parametros =
@@ -364,67 +364,46 @@
             parametros.get("invitado");
 
 
-        const elementoNombre =
+        /*
+         * Si el enlace tiene un invitado,
+         * usamos ese nombre.
+         *
+         * Si no tiene ninguno,
+         * usamos Montoya Agudelo
+         * como prueba.
+         */
+
+        if (!invitado) {
+
+            invitado =
+                nombrePrueba;
+
+        }
+
+
+        /* =====================================
+           CONVERTIR "FAMILIA" EN "FLIA."
+           ===================================== */
+
+        invitado =
+            invitado.replace(
+                /^Familia\s+/i,
+                "Flia. "
+            );
+
+
+        /* =====================================
+           MOSTRAR EL NOMBRE
+           ===================================== */
+
+        const elemento =
             document.getElementById(
                 "nombreInvitado"
             );
 
 
-        /* =====================================
-           SI EXISTE INVITADO
-           ===================================== */
-
-        if (invitado) {
-
-
-            /*
-             * Decodificar caracteres especiales
-             */
-
-            invitado =
-                decodeURIComponent(
-                    invitado
-                );
-
-
-            /*
-             * Cambiar:
-             *
-             * Familia Montoya Agudelo
-             *
-             * por:
-             *
-             * Flia. Montoya Agudelo
-             */
-
-            invitado =
-                invitado.replace(
-                    /^Familia\s+/i,
-                    "Flia. "
-                );
-
-
-            /*
-             * Mostrar nombre
-             */
-
-            elementoNombre.textContent =
-                invitado.trim();
-
-
-        } else {
-
-
-            /*
-             * Si no hay invitado,
-             * no mostrar ningún texto.
-             */
-
-            elementoNombre.style.display =
-                "none";
-
-        }
-
+        elemento.textContent =
+            invitado.trim();
 
     </script>
 
