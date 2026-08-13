@@ -3,281 +3,285 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width,
-                   initial-scale=1.0,
-                   maximum-scale=1.0,
-                   user-scalable=no">
+<meta name="viewport"
+      content="width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      user-scalable=no">
 
-    <title>Baby Shower Ana Sofía 💜</title>
+<title>Baby Shower Ana Sofía 💜</title>
 
-    <!-- Vista previa al compartir -->
+<meta property="og:title"
+      content="Baby Shower Ana Sofía 💜">
 
-    <meta property="og:title"
-          content="Baby Shower Ana Sofía 💜">
+<meta property="og:description"
+      content="Tenemos una invitación muy especial para ti 💜">
 
-    <meta property="og:description"
-          content="Tenemos una invitación muy especial para ti 💜">
+<meta property="og:type"
+      content="website">
 
-    <meta property="og:type"
-          content="website">
+<meta property="og:url"
+      content="https://srobledog97.github.io/">
 
-    <meta property="og:url"
-          content="https://srobledog97.github.io/">
+<meta property="og:image"
+      content="https://srobledog97.github.io/Invitacion.png">
 
-    <meta property="og:image"
-          content="https://srobledog97.github.io/Invitacion.png">
 
+<style>
 
-    <style>
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+html,
+body {
 
-        html,
-        body {
-            width: 100%;
-            min-height: 100%;
-        }
+    width: 100%;
+    min-height: 100%;
 
+}
 
-        body {
-            background: #12091c;
-            overflow-x: hidden;
-        }
+body {
 
+    background: #12091c;
 
-        /* =====================================
-           INVITACIÓN
-           ===================================== */
+    overflow-x: hidden;
 
-        .invitacion {
+}
 
-            position: relative;
 
-            width: 100%;
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
 
-            max-width: 700px;
+.invitacion {
 
-            margin: 0 auto;
+    position: relative;
 
-            line-height: 0;
+    width: 100%;
 
-        }
+    max-width: 700px;
 
+    margin: 0 auto;
 
-        /* =====================================
-           IMAGEN ORIGINAL
-           ===================================== */
+    line-height: 0;
 
-        .imagen {
+}
 
-            display: block;
 
-            width: 100%;
+/* =========================================
+   IMAGEN ORIGINAL
+========================================= */
 
-            height: auto;
+.imagen {
 
-        }
+    display: block;
 
+    width: 100%;
 
-        /* =====================================
-           NOMBRE DEL INVITADO
-           ===================================== */
+    height: auto;
 
-        .nombre-invitado {
+}
 
-            position: absolute;
 
-            /*
-             * POSICIÓN DEL NOMBRE
-             *
-             * Esta es la zona donde debe
-             * aparecer el nombre del invitado.
-             */
+/* =========================================
+   NOMBRE DEL INVITADO
+========================================= */
 
-            top: 70%;
+.nombre-invitado {
 
-            left: 3%;
+    position: absolute;
 
-            width: 94%;
+    /*
+       POSICIÓN DEFINITIVA
+       ENCONTRADA EN LA PRUEBA
+    */
 
-            padding: 0 5px;
+    top: 70%;
 
-            text-align: center;
+    left: 5%;
 
-            line-height: 1.15;
+    width: 90%;
 
-            color: #65418c;
+    text-align: center;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    line-height: 1.15;
 
-            font-size:
-                clamp(
-                    18px,
-                    4.5vw,
-                    29px
-                );
+    color: #65418c;
 
-            font-weight: bold;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            text-shadow:
-                0 1px 1px
-                rgba(255,255,255,0.55);
+    font-size:
+        clamp(
+            18px,
+            4.5vw,
+            30px
+        );
 
-            z-index: 5;
+    font-weight: bold;
 
-            pointer-events: none;
+    z-index: 5;
 
-        }
+    pointer-events: none;
 
+}
 
-        /* =====================================
-           BOTÓN INVISIBLE DE GOOGLE MAPS
-           
-           NO CAMBIA SU APARIENCIA.
-           SOLO HACE CLICKEABLE EL BOTÓN
-           QUE YA ESTÁ DENTRO DE LA IMAGEN.
-           ===================================== */
 
-        .boton-maps {
+/* =========================================
+   BOTÓN GOOGLE MAPS
 
-            position: absolute;
+   INVISIBLE.
+   EL ASPECTO LO PROPORCIONA LA IMAGEN.
+========================================= */
 
-            top: 76.1%;
+.boton-maps {
 
-            left: 29%;
+    position: absolute;
 
-            width: 42%;
+    top: 76.1%;
 
-            height: 5.7%;
+    left: 29%;
 
-            z-index: 10;
+    width: 42%;
 
-            display: block;
+    height: 5.7%;
 
-            background: transparent;
+    z-index: 10;
 
-            border: none;
+    display: block;
 
-            cursor: pointer;
+    background: transparent;
 
-            -webkit-tap-highlight-color:
-                transparent;
+    border: none;
 
-        }
+    cursor: pointer;
 
+    -webkit-tap-highlight-color:
+        transparent;
 
-        /* =====================================
-           BOTÓN INVISIBLE DE WHATSAPP
-           ===================================== */
+}
 
-        .boton-whatsapp {
 
-            position: absolute;
+/* =========================================
+   BOTÓN WHATSAPP
 
-            top: 82.1%;
+   INVISIBLE.
+   EL ASPECTO LO PROPORCIONA LA IMAGEN.
+========================================= */
 
-            left: 29%;
+.boton-whatsapp {
 
-            width: 42%;
+    position: absolute;
 
-            height: 5.7%;
+    top: 82.1%;
 
-            z-index: 10;
+    left: 29%;
 
-            display: block;
+    width: 42%;
 
-            background: transparent;
+    height: 5.7%;
 
-            border: none;
+    z-index: 10;
 
-            cursor: pointer;
+    display: block;
 
-            -webkit-tap-highlight-color:
-                transparent;
+    background: transparent;
 
-        }
+    border: none;
 
+    cursor: pointer;
 
-        /* =====================================
-           PANTALLAS PEQUEÑAS
-           ===================================== */
+    -webkit-tap-highlight-color:
+        transparent;
 
-        @media (max-width: 500px) {
+}
 
-            .nombre-invitado {
 
-                top: 55.2%;
+/* =========================================
+   MÓVILES
 
-                left: 3%;
+   IMPORTANTE:
+   TOP SIGUE SIENDO 70%.
+========================================= */
 
-                width: 94%;
+@media (max-width: 500px) {
 
-                font-size:
-                    clamp(
-                        17px,
-                        4.5vw,
-                        26px
-                    );
+    .nombre-invitado {
 
-            }
+        top: 70%;
 
+        left: 4%;
 
-            /*
-             * IMPORTANTE:
-             * NO MODIFICAMOS LAS ZONAS
-             * DE LOS BOTONES.
-             */
+        width: 92%;
 
-            .boton-maps {
+        font-size:
+            clamp(
+                17px,
+                4.5vw,
+                27px
+            );
 
-                top: 76.1%;
+    }
 
-                left: 29%;
 
-                width: 42%;
+    /*
+       LOS BOTONES NO SE MODIFICAN
+    */
 
-                height: 5.7%;
+    .boton-maps {
 
-            }
+        top: 76.1%;
 
+        left: 29%;
 
-            .boton-whatsapp {
+        width: 42%;
 
-                top: 82.1%;
+        height: 5.7%;
 
-                left: 29%;
+    }
 
-                width: 42%;
 
-                height: 5.7%;
+    .boton-whatsapp {
 
-            }
+        top: 82.1%;
 
-        }
+        left: 29%;
 
+        width: 42%;
 
-        @media (max-width: 360px) {
+        height: 5.7%;
 
-            .nombre-invitado {
+    }
 
-                font-size: 17px;
+}
 
-            }
 
-        }
+/* =========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================= */
 
-    </style>
+@media (max-width: 360px) {
+
+    .nombre-invitado {
+
+        font-size: 17px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -285,127 +289,166 @@
 <body>
 
 
-    <main class="invitacion">
+<div class="invitacion">
 
 
-        <!-- =================================
-             IMAGEN DE LA INVITACIÓN
-             ================================= -->
+    <!-- =====================================
+         IMAGEN ORIGINAL
+    ====================================== -->
 
-        <img
-            src="Invitacion.png"
-            alt="Baby Shower Ana Sofía"
-            class="imagen"
-        >
-
-
-        <!-- =================================
-             NOMBRE PERSONALIZADO
-             
-             NO EXISTE "CON CARIÑO PARA:"
-             ================================= -->
-
-        <div
-            id="nombreInvitado"
-            class="nombre-invitado">
-        </div>
+    <img
+        src="Invitacion.png"
+        class="imagen"
+        alt="Baby Shower Ana Sofía"
+    >
 
 
-        <!-- =================================
-             GOOGLE MAPS
-             ================================= -->
+    <!-- =====================================
+         NOMBRE PERSONALIZADO
+    ====================================== -->
 
-        <a
-            class="boton-maps"
-            href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Ver ubicación">
-        </a>
+    <div
+        id="nombreInvitado"
+        class="nombre-invitado">
+    </div>
 
 
-        <!-- =================================
-             WHATSAPP
-             ================================= -->
+    <!-- =====================================
+         GOOGLE MAPS
+    ====================================== -->
 
-        <a
-            class="boton-whatsapp"
-            href="https://wa.me/573142999978"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Confirmar asistencia">
-        </a>
-
-
-    </main>
+    <a
+        class="boton-maps"
+        href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver ubicación">
+    </a>
 
 
-    <script>
+    <!-- =====================================
+         WHATSAPP
+    ====================================== -->
 
-        /* =====================================
-           NOMBRE PREDETERMINADO PARA LA PRUEBA
-           ===================================== */
-
-        const nombrePrueba =
-            "Flia. Montoya Agudelo";
-
-
-        /* =====================================
-           LEER EL NOMBRE DESDE EL ENLACE
-           ===================================== */
-
-        const parametros =
-            new URLSearchParams(
-                window.location.search
-            );
+    <a
+        id="botonWhatsApp"
+        class="boton-whatsapp"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Confirmar asistencia">
+    </a>
 
 
-        let invitado =
-            parametros.get("invitado");
+</div>
 
 
-        /*
-         * Si el enlace tiene un invitado,
-         * usamos ese nombre.
-         *
-         * Si no tiene ninguno,
-         * usamos Montoya Agudelo
-         * como prueba.
-         */
+<script>
 
-        if (!invitado) {
+/* =========================================
+   NOMBRE DE PRUEBA
+========================================= */
 
-            invitado =
-                nombrePrueba;
-
-        }
+const nombrePorDefecto =
+    "Familia Montoya Agudelo";
 
 
-        /* =====================================
-           CONVERTIR "FAMILIA" EN "FLIA."
-           ===================================== */
+/* =========================================
+   LEER EL NOMBRE DESDE LA URL
+========================================= */
 
-        invitado =
-            invitado.replace(
-                /^Familia\s+/i,
-                "Flia. "
-            );
-
-
-        /* =====================================
-           MOSTRAR EL NOMBRE
-           ===================================== */
-
-        const elemento =
-            document.getElementById(
-                "nombreInvitado"
-            );
+const parametros =
+    new URLSearchParams(
+        window.location.search
+    );
 
 
-        elemento.textContent =
-            invitado.trim();
+let invitado =
+    parametros.get("invitado");
 
-    </script>
+
+/*
+   Si no existe un nombre en la URL,
+   utilizamos Montoya Agudelo
+   como prueba.
+*/
+
+if (!invitado) {
+
+    invitado =
+        nombrePorDefecto;
+
+}
+
+
+/* =========================================
+   DECODIFICAR EL NOMBRE
+========================================= */
+
+try {
+
+    invitado =
+        decodeURIComponent(invitado);
+
+} catch (error) {
+
+    /*
+       Si ya viene correctamente
+       decodificado, no hacemos nada.
+    */
+
+}
+
+
+/* =========================================
+   CAMBIAR "FAMILIA" POR "FLIA."
+========================================= */
+
+invitado =
+    invitado.replace(
+        /^Familia\s+/i,
+        "Flia. "
+    );
+
+
+/* =========================================
+   MOSTRAR EL NOMBRE
+========================================= */
+
+document.getElementById(
+    "nombreInvitado"
+).textContent =
+    invitado.trim();
+
+
+/* =========================================
+   WHATSAPP PERSONALIZADO
+========================================= */
+
+const numeroWhatsApp =
+    "573142999978";
+
+
+const mensaje =
+    "Hola 👋, confirmo mi asistencia al " +
+    "Baby Shower de Ana Sofía 💜. " +
+    "Invitación para: " +
+    invitado.trim();
+
+
+const enlaceWhatsApp =
+    "https://wa.me/" +
+    numeroWhatsApp +
+    "?text=" +
+    encodeURIComponent(mensaje);
+
+
+document.getElementById(
+    "botonWhatsApp"
+).href =
+    enlaceWhatsApp;
+
+</script>
 
 
 </body>
