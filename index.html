@@ -1,461 +1,396 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  >
-
-  <title>Baby Shower Ana Sofía 💜</title>
-
-  <!-- Vista previa al compartir -->
-  <meta property="og:title" content="Baby Shower Ana Sofía 💜">
-  <meta
-    property="og:description"
-    content="Acompáñanos a celebrar un dulce Baby Shower"
-  >
-  <meta property="og:type" content="website">
-  <meta
-    property="og:url"
-    content="https://srobledog97.github.io/"
-  >
-  <meta
-    property="og:image"
-    content="https://srobledog97.github.io/Invitacion.png"
-  >
+    <meta charset="UTF-8">
 
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      width: 100%;
-      min-height: 100%;
-      background: #10071b;
-    }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      overflow-x: hidden;
-    }
+    <title>Baby Shower Ana Sofía 💜</title>
 
-    /* CONTENEDOR PRINCIPAL */
-    .invitacion {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 0;
-    }
+    <!-- Vista previa al compartir -->
+    <meta property="og:title"
+          content="Baby Shower Ana Sofía 💜">
 
-    /* IMAGEN ORIGINAL */
-    .imagen-invitacion {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+    <meta property="og:description"
+          content="Tenemos una invitación muy especial para ti 💜">
 
-    /*
-      ZONA DE PERSONALIZACIÓN
+    <meta property="og:type"
+          content="website">
 
-      El nombre aparece encima de la imagen,
-      pero sin modificar la imagen original.
-    */
-    .personalizacion {
-      position: absolute;
+    <meta property="og:url"
+          content="https://srobledog97.github.io/">
 
-      /*
-        Posición vertical del nombre.
-        Se ajusta proporcionalmente al tamaño
-        de la imagen.
-      */
-      top: 67.2%;
+    <meta property="og:image"
+          content="https://srobledog97.github.io/Invitacion.png">
 
-      left: 8%;
-      width: 84%;
+    <style>
 
-      text-align: center;
-      line-height: normal;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-      pointer-events: none;
-    }
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
 
-    .para {
-      display: block;
+        body {
+            background: #12091c;
+            font-family: Georgia, "Times New Roman", serif;
+            overflow-x: hidden;
+        }
 
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(11px, 2.8vw, 17px);
-      font-weight: normal;
+        /* CONTENEDOR PRINCIPAL */
 
-      letter-spacing: 1.2px;
+        .invitacion {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-      color: #76517d;
+        /* IMAGEN */
 
-      margin-bottom: 5px;
+        .imagen-invitacion {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
 
-      text-transform: uppercase;
+        /* ZONA INFERIOR SOBRE LA IMAGEN */
 
-      text-shadow:
-        0 1px 1px rgba(255,255,255,0.7);
-    }
+        .zona-invitados {
+            position: absolute;
 
-    .nombre-invitado {
-      display: block;
+            /*
+             * Esta posición mantiene el nombre
+             * en la zona donde estaba originalmente.
+             */
+            left: 0;
+            right: 0;
+            top: 58.5%;
 
-      font-family: Georgia, "Times New Roman", serif;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-      font-size: clamp(17px, 4.8vw, 31px);
+        /* NOMBRE DEL INVITADO */
 
-      font-weight: bold;
+        .nombre-invitado {
+            color: #65418c;
 
-      color: #76517d;
+            font-family: Georgia, "Times New Roman", serif;
 
-      line-height: 1.15;
+            font-size: clamp(19px, 4.6vw, 30px);
 
-      text-shadow:
-        0 1px 1px rgba(255,255,255,0.8);
-    }
+            font-weight: bold;
 
+            line-height: 1.15;
 
-    /* CONTENEDOR DE BOTONES */
-    .botones {
-      position: absolute;
+            text-align: center;
 
-      /*
-        Los botones se mantienen dentro
-        de la propia invitación.
-      */
-      top: 76.3%;
+            text-shadow:
+                0 1px 1px rgba(255,255,255,0.5);
 
-      left: 50%;
-      transform: translateX(-50%);
+            max-width: 95%;
+            margin: 0 auto;
+        }
 
-      width: 55%;
+        /*
+         * BOTONES
+         *
+         * Diseño similar al original:
+         * compactos, horizontales y separados.
+         */
 
-      display: flex;
-      flex-direction: column;
+        .botones {
+            margin-top: 62px;
 
-      gap: 9px;
+            display: flex;
+            flex-direction: column;
 
-      line-height: normal;
-    }
+            align-items: center;
 
+            gap: 10px;
 
-    /* BOTONES */
-    .boton {
+            width: 100%;
+        }
 
-      width: 100%;
+        .boton {
+            width: 220px;
+            height: 56px;
 
-      min-height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+            gap: 10px;
 
-      gap: 10px;
+            border: none;
 
-      padding: 10px 18px;
+            border-radius: 30px;
 
-      border-radius: 28px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #874bd1 0%,
+                    #7134b5 100%
+                );
 
-      border: 1px solid rgba(255,255,255,0.55);
+            color: white;
 
-      /*
-        Aspecto parecido a los botones
-        originales de la invitación.
-      */
-      background:
-        linear-gradient(
-          180deg,
-          #8146d6 0%,
-          #7134c5 100%
-        );
+            text-decoration: none;
 
-      color: #ffffff;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-      text-decoration: none;
+            font-size: 15px;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+            font-weight: 400;
 
-      font-size: clamp(12px, 3vw, 17px);
+            letter-spacing: 0.2px;
 
-      font-weight: 400;
+            box-shadow:
+                0 3px 7px rgba(43, 15, 75, 0.35);
 
-      letter-spacing: 0.2px;
+            transition:
+                transform 0.15s ease,
+                box-shadow 0.15s ease;
+        }
 
-      box-shadow:
-        0 3px 6px rgba(54, 20, 85, 0.35),
-        inset 0 1px 2px rgba(255,255,255,0.35);
+        .boton:hover {
+            transform: translateY(-1px);
 
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-    }
+            box-shadow:
+                0 5px 10px rgba(43, 15, 75, 0.4);
+        }
 
+        .boton:active {
+            transform: scale(0.97);
+        }
 
-    /* ICONOS */
-    .icono {
-      width: 25px;
-      height: 25px;
+        /* ICONOS */
 
-      flex: 0 0 25px;
+        .icono {
+            width: 25px;
+            height: 25px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    .icono svg {
-      width: 24px;
-      height: 24px;
+            font-size: 24px;
 
-      fill: none;
+            line-height: 1;
+        }
 
-      stroke: white;
+        /* Ajuste específico del corazón */
 
-      stroke-width: 2;
+        .icono-corazon {
+            font-size: 25px;
+            font-family: Arial, sans-serif;
+        }
 
-      stroke-linecap: round;
+        /* TEXTO DE LOS BOTONES */
 
-      stroke-linejoin: round;
-    }
+        .texto-boton {
+            white-space: nowrap;
+        }
 
+        /* MÓVILES */
 
-    /* EFECTO AL TOCAR */
-    .boton:active {
-      transform: scale(0.97);
+        @media (max-width: 500px) {
 
-      box-shadow:
-        0 2px 4px rgba(54, 20, 85, 0.3);
-    }
+            .zona-invitados {
+                top: 58.5%;
+                padding: 0 12px;
+            }
 
+            .nombre-invitado {
+                font-size: clamp(18px, 4.8vw, 26px);
+            }
 
-    /*
-      En pantallas muy pequeñas reducimos
-      ligeramente los botones para que no
-      tapen los personajes.
-    */
-    @media (max-width: 380px) {
+            .botones {
+                margin-top: 62px;
+                gap: 10px;
+            }
 
-      .botones {
-        width: 58%;
-        gap: 7px;
-      }
+            .boton {
+                width: 220px;
+                height: 55px;
 
-      .boton {
-        min-height: 48px;
-        padding: 8px 10px;
-        font-size: 11px;
-      }
+                font-size: 14px;
+            }
+        }
 
-      .icono,
-      .icono svg {
-        width: 22px;
-        height: 22px;
-      }
+        /* PANTALLAS MUY PEQUEÑAS */
 
-      .personalizacion {
-        top: 67%;
-      }
-    }
+        @media (max-width: 360px) {
 
+            .boton {
+                width: 205px;
+                height: 52px;
 
-    /*
-      En tablets y pantallas grandes
-    */
-    @media (min-width: 701px) {
+                font-size: 13px;
+            }
 
-      .invitacion {
-        box-shadow:
-          0 0 35px rgba(0,0,0,0.35);
-      }
+            .nombre-invitado {
+                font-size: 18px;
+            }
+        }
 
-      .personalizacion {
-        top: 67.2%;
-      }
-
-      .botones {
-        top: 76.3%;
-        width: 55%;
-      }
-    }
-
-  </style>
+    </style>
 </head>
 
 
 <body>
 
-  <main class="invitacion">
+    <main class="invitacion">
 
-    <!-- IMAGEN DE LA INVITACIÓN -->
-    <img
-      src="Invitacion.png"
-      alt="Invitación Baby Shower Ana Sofía"
-      class="imagen-invitacion"
-    >
-
-
-    <!-- PERSONALIZACIÓN DEL INVITADO -->
-    <div class="personalizacion">
-
-      <span class="para">
-        Con cariño, para:
-      </span>
-
-      <span
-        class="nombre-invitado"
-        id="nombreInvitado"
-      >
-        Familia Montoya Agudelo
-      </span>
-
-    </div>
+        <!-- IMAGEN PRINCIPAL -->
+        <img
+            src="Invitacion.png"
+            alt="Invitación Baby Shower Ana Sofía"
+            class="imagen-invitacion"
+        >
 
 
-    <!-- BOTONES -->
-    <div class="botones">
+        <!-- NOMBRE PERSONALIZADO -->
 
-      <!-- GOOGLE MAPS -->
-      <a
-        class="boton"
-        href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+        <section class="zona-invitados">
 
-        <span class="icono">
-
-          <svg viewBox="0 0 24 24">
-
-            <path
-              d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12z"
-            />
-
-            <circle
-              cx="12"
-              cy="9"
-              r="2.2"
-            />
-
-          </svg>
-
-        </span>
-
-        <span>VER UBICACIÓN</span>
-
-      </a>
+            <div
+                id="nombreInvitado"
+                class="nombre-invitado">
+            </div>
 
 
-      <!-- WHATSAPP -->
-      <a
-        class="boton"
-        id="whatsapp"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+            <!-- BOTONES -->
 
-        <span class="icono">
+            <div class="botones">
 
-          <svg viewBox="0 0 24 24">
+                <!-- GOOGLE MAPS -->
 
-            <path
-              d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"
-            />
+                <a
+                    class="boton"
+                    href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-            <path
-              d="M9.2 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.4c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.4.6c.3.1.4.3.4.5v.5c0 .3-.1.5-.4.7-.5.3-1.1.4-1.7.2-2.1-.6-4-2.5-4.6-4.6-.2-.6-.1-1.2.2-1.7z"
-            />
+                    <span class="icono">📍</span>
 
-          </svg>
+                    <span class="texto-boton">
+                        VER UBICACIÓN
+                    </span>
 
-        </span>
-
-        <span>CONFIRMAR ASISTENCIA</span>
-
-      </a>
-
-    </div>
-
-  </main>
+                </a>
 
 
-  <script>
+                <!-- WHATSAPP -->
 
-    /*
-      DATOS DE LA INVITACIÓN
-    */
+                <a
+                    class="boton"
+                    href="https://wa.me/573142999978"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-    const numeroWhatsApp = "573142999978";
+                    <span
+                        class="icono icono-corazon">
+                        ♡
+                    </span>
 
+                    <span class="texto-boton">
+                        CONFIRMAR ASISTENCIA
+                    </span>
 
-    /*
-      LEER EL INVITADO DESDE LA URL
+                </a>
 
-      Ejemplo:
+            </div>
 
-      https://srobledog97.github.io/?invitado=Familia%20Montoya%20Agudelo
-    */
+        </section>
 
-    const parametros = new URLSearchParams(
-      window.location.search
-    );
-
-    const invitado =
-      parametros.get("invitado");
-
-
-    /*
-      SI EXISTE UN INVITADO EN LA URL,
-      CAMBIAMOS AUTOMÁTICAMENTE EL NOMBRE.
-    */
-
-    if (invitado && invitado.trim() !== "") {
-
-      document.getElementById(
-        "nombreInvitado"
-      ).textContent = invitado;
-
-    }
+    </main>
 
 
-    /*
-      MENSAJE AUTOMÁTICO DE WHATSAPP
-    */
+    <script>
 
-    const nombreFinal =
-      document.getElementById(
-        "nombreInvitado"
-      ).textContent.trim();
-
-
-    const mensaje =
-      `Hola, confirmo mi asistencia al Baby Shower de Ana Sofía. Invitación para: ${nombreFinal}. 💜`;
+        /*
+         * PERSONALIZACIÓN DEL INVITADO
+         *
+         * Ejemplo:
+         *
+         * https://srobledog97.github.io/?invitado=Familia%20Montoya%20Agudelo
+         *
+         */
 
 
-    const enlaceWhatsApp =
-      "https://wa.me/" +
-      numeroWhatsApp +
-      "?text=" +
-      encodeURIComponent(mensaje);
+        function obtenerInvitado() {
+
+            const parametros =
+                new URLSearchParams(
+                    window.location.search
+                );
+
+            let invitado =
+                parametros.get("invitado");
 
 
-    document.getElementById(
-      "whatsapp"
-    ).href = enlaceWhatsApp;
+            if (!invitado) {
 
-  </script>
+                return "";
+
+            }
+
+
+            /*
+             * Cambiar automáticamente
+             *
+             * Familia → Flia.
+             */
+
+            invitado =
+                invitado.replace(
+                    /^Familia\s+/i,
+                    "Flia. "
+                );
+
+
+            return invitado.trim();
+
+        }
+
+
+        const invitado =
+            obtenerInvitado();
+
+
+        const nombre =
+            document.getElementById(
+                "nombreInvitado"
+            );
+
+
+        if (invitado) {
+
+            nombre.textContent =
+                invitado;
+
+        } else {
+
+            nombre.style.display =
+                "none";
+
+        }
+
+    </script>
 
 </body>
 </html>
