@@ -1,196 +1,318 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Baby Shower Ana Sofía 💜</title>
+    <title>Baby Shower Ana Sofía 💜</title>
 
-<meta name="description"
-content="Invitación al Baby Shower de Ana Sofía">
+    <meta name="description"
+          content="Invitación al Baby Shower de Ana Sofía 💜">
 
-<!-- Vista previa de WhatsApp -->
-<meta property="og:title"
-content="Baby Shower Ana Sofía 💜">
+    <meta property="og:title"
+          content="Baby Shower Ana Sofía 💜">
 
-<meta property="og:description"
-content="Acompáñanos a celebrar un dulce Baby Shower">
+    <meta property="og:description"
+          content="Tenemos una invitación muy especial para ti.">
 
-<meta property="og:type"
-content="website">
+    <meta property="og:type"
+          content="website">
 
-<meta property="og:url"
-content="https://srobledog97.github.io/">
+    <style>
 
-<meta property="og:image"
-content="https://srobledog97.github.io/Invitacion.png">
+        /* ================================
+           CONFIGURACIÓN GENERAL
+        ================================= */
 
-<meta property="og:image:alt"
-content="Invitación Baby Shower Ana Sofía">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
 
-* {
-    box-sizing: border-box;
-}
+        body {
+            background: #12091d;
+            font-family: Georgia, "Times New Roman", serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow-x: hidden;
+        }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-}
+        /* ================================
+           CONTENEDOR PRINCIPAL
+        ================================= */
 
-body {
-    background: #120b1f;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow-x: hidden;
-}
+        .invitacion {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            line-height: 0;
 
-.invitacion {
-    position: relative;
-    width: min(100vw, 1024px);
-    aspect-ratio: 2 / 3;
-    overflow: hidden;
-    background: #f5e8dc;
-}
+            animation: aparecer 1.2s ease-out;
+        }
 
-.invitacion img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+        /* Imagen principal */
 
-.zona-boton {
-    position: absolute;
-    display: block;
-    z-index: 10;
-    cursor: pointer;
-    border-radius: 50px;
-    background: transparent;
-    -webkit-tap-highlight-color: transparent;
-}
+        .invitacion img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
 
-.ubicacion {
-    left: 31%;
-    width: 39%;
-    top: 76.4%;
-    height: 5.8%;
-}
+        /* ================================
+           BOTONES INTERACTIVOS
+        ================================= */
 
-.confirmar {
-    left: 31%;
-    width: 39%;
-    top: 82.2%;
-    height: 5.8%;
-}
+        .boton {
+            position: absolute;
 
-.zona-boton:active {
-    transform: scale(0.97);
-}
+            left: 50%;
+            transform: translateX(-50%);
 
-.cargando {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f5e8dc;
-    z-index: 20;
-    font-family: Arial, sans-serif;
-    color: #6d4784;
-    font-size: 14px;
-    transition: opacity 0.4s ease;
-}
+            width: 32%;
+            min-width: 190px;
+            max-width: 270px;
 
-.cargando.oculto {
-    opacity: 0;
-    pointer-events: none;
-}
+            height: auto;
+            min-height: 52px;
 
-@media (max-width: 600px) {
+            border-radius: 35px;
 
-    .invitacion {
-        width: 100vw;
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-}
+            gap: 10px;
 
-@media (min-width: 1025px) {
+            text-decoration: none;
 
-    body {
-        padding: 25px 0;
-    }
+            color: white;
 
-    .invitacion {
-        border-radius: 8px;
-        box-shadow:
-        0 20px 70px rgba(0, 0, 0, 0.45);
-    }
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
 
-}
+            letter-spacing: 0.2px;
 
-</style>
+            box-shadow:
+                0 5px 12px rgba(0, 0, 0, 0.25);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                filter 0.2s ease;
+
+            z-index: 10;
+
+            line-height: normal;
+        }
+
+        /* Botón ubicación */
+
+        .mapa {
+            bottom: 14.8%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b4bd9,
+                    #6221a8
+                );
+        }
+
+        /* Botón WhatsApp */
+
+        .whatsapp {
+            bottom: 8.7%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b4bd9,
+                    #6221a8
+                );
+        }
+
+        /* Iconos */
+
+        .icono {
+            font-size: 25px;
+            line-height: 1;
+        }
+
+        /* Efecto al tocar */
+
+        .boton:hover {
+            transform: translateX(-50%) translateY(-2px);
+            box-shadow:
+                0 8px 18px rgba(0, 0, 0, 0.35);
+            filter: brightness(1.08);
+        }
+
+        .boton:active {
+            transform: translateX(-50%) scale(0.96);
+        }
+
+        /* ================================
+           ANIMACIONES
+        ================================= */
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+        /* Animación independiente de botones */
+
+        .boton {
+            animation: subir 1s ease-out 0.7s both;
+        }
+
+        @keyframes subir {
+
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+        }
+
+        /* ================================
+           CELULARES
+        ================================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                background: #12091d;
+            }
+
+            .invitacion {
+                width: 100%;
+                max-width: 700px;
+            }
+
+            .boton {
+
+                width: 34%;
+
+                min-width: 180px;
+
+                min-height: 48px;
+
+                font-size: 13px;
+
+                gap: 7px;
+            }
+
+            .icono {
+                font-size: 22px;
+            }
+
+        }
+
+        /* ================================
+           CELULARES PEQUEÑOS
+        ================================= */
+
+        @media (max-width: 390px) {
+
+            .boton {
+
+                min-width: 165px;
+
+                min-height: 44px;
+
+                font-size: 12px;
+            }
+
+            .icono {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<main class="invitacion">
+    <main class="invitacion">
 
-<div class="cargando" id="cargando">
-Preparando tu invitación... 💜
-</div>
+        <!-- =================================
+             INVITACIÓN
+        ================================== -->
 
-<img
-src="Invitacion.png"
-alt="Invitación Baby Shower Ana Sofía"
-id="imagenInvitacion"
->
+        <img
+            src="Invitacion.png"
+            alt="Invitación Baby Shower Ana Sofía"
+        >
 
-<!-- BOTÓN VER UBICACIÓN -->
 
-<a
-class="zona-boton ubicacion"
-href="https://www.google.com/maps/search/?api=1&query=Salon+Social+Punto+Rojo"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Ver ubicación del Baby Shower">
-</a>
+        <!-- =================================
+             BOTÓN GOOGLE MAPS
+        ================================== -->
 
-<!-- BOTÓN CONFIRMAR ASISTENCIA -->
+        <a
+            class="boton mapa"
+            href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20Social%20Punto%20Rojo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver ubicación en Google Maps"
+        >
 
-<a
-class="zona-boton confirmar"
-href="https://wa.me/?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Ana%20Sof%C3%ADa.%20%F0%9F%92%9C"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Confirmar asistencia por WhatsApp">
-</a>
+            <span class="icono">📍</span>
 
-</main>
+            <span>VER UBICACIÓN</span>
 
-<script>
+        </a>
 
-const imagen = document.getElementById("imagenInvitacion");
-const cargando = document.getElementById("cargando");
 
-function ocultarCarga() {
-    cargando.classList.add("oculto");
-}
+        <!-- =================================
+             BOTÓN WHATSAPP
+        ================================== -->
 
-if (imagen.complete) {
-    ocultarCarga();
-} else {
-    imagen.addEventListener("load", ocultarCarga);
-}
+        <a
+            class="boton whatsapp"
+            href="https://wa.me/?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Ana%20Sof%C3%ADa%20%F0%9F%92%9C"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Confirmar asistencia por WhatsApp"
+        >
 
-</script>
+            <span class="icono">♡</span>
+
+            <span>CONFIRMAR ASISTENCIA</span>
+
+        </a>
+
+    </main>
+
 
 </body>
 </html>
