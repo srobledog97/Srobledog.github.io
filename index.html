@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
 
     <title>Baby Shower Ana Sofía 💜</title>
 
     <!-- Vista previa al compartir -->
+
     <meta property="og:title"
           content="Baby Shower Ana Sofía 💜">
 
@@ -24,6 +30,7 @@
     <meta property="og:image"
           content="https://srobledog97.github.io/Invitacion.png">
 
+
     <style>
 
         * {
@@ -32,328 +39,362 @@
             padding: 0;
         }
 
+
         html,
         body {
+
             width: 100%;
             min-height: 100%;
+
         }
+
 
         body {
+
             background: #12091c;
-            font-family: Georgia, "Times New Roman", serif;
+
             overflow-x: hidden;
+
         }
 
-        /* CONTENEDOR PRINCIPAL */
+
+        /* =====================================
+           CONTENEDOR DE LA INVITACIÓN
+           ===================================== */
 
         .invitacion {
-            width: 100%;
-            max-width: 700px;
-            margin: 0 auto;
+
             position: relative;
-        }
 
-        /* IMAGEN */
-
-        .imagen-invitacion {
-            display: block;
             width: 100%;
-            height: auto;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            line-height: 0;
+
         }
 
-        /* ZONA INFERIOR SOBRE LA IMAGEN */
 
-        .zona-invitados {
+        /* =====================================
+           IMAGEN ORIGINAL
+           ===================================== */
+
+        .imagen {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+
+        /* =====================================
+           NOMBRE DEL INVITADO
+           ===================================== */
+
+        .nombre-invitado {
+
             position: absolute;
 
             /*
-             * Esta posición mantiene el nombre
-             * en la zona donde estaba originalmente.
+             * Ubicación del nombre
              */
-            left: 0;
-            right: 0;
-            top: 58.5%;
+
+            top: 67.3%;
+
+            left: 4%;
+
+            width: 92%;
 
             text-align: center;
-            padding: 0 20px;
-        }
-
-        /* NOMBRE DEL INVITADO */
-
-        .nombre-invitado {
-            color: #65418c;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: clamp(19px, 4.6vw, 30px);
-
-            font-weight: bold;
 
             line-height: 1.15;
 
-            text-align: center;
+            color: #65418c;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(
+                18px,
+                4.4vw,
+                29px
+            );
+
+            font-weight: bold;
 
             text-shadow:
-                0 1px 1px rgba(255,255,255,0.5);
+                0 1px 1px
+                rgba(255,255,255,0.5);
 
-            max-width: 95%;
-            margin: 0 auto;
+            z-index: 5;
+
+            pointer-events: none;
+
         }
 
-        /*
-         * BOTONES
-         *
-         * Diseño similar al original:
-         * compactos, horizontales y separados.
-         */
 
-        .botones {
-            margin-top: 62px;
+        /* =====================================
+           ÁREA TRANSPARENTE GOOGLE MAPS
+           
+           NO SE VE.
+           
+           SOLAMENTE HACE CLICKEABLE
+           EL BOTÓN QUE YA ESTÁ EN LA IMAGEN.
+           ===================================== */
 
-            display: flex;
-            flex-direction: column;
+        .boton-maps {
 
-            align-items: center;
+            position: absolute;
 
-            gap: 10px;
+            /*
+             * Posición aproximada del botón
+             * original de la imagen.
+             */
 
-            width: 100%;
-        }
+            top: 76.2%;
 
-        .boton {
-            width: 220px;
-            height: 56px;
+            left: 30%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 40%;
 
-            gap: 10px;
+            height: 5.5%;
+
+            z-index: 10;
+
+            display: block;
+
+            background: transparent;
 
             border: none;
 
-            border-radius: 30px;
+            cursor: pointer;
 
-            background:
-                linear-gradient(
-                    180deg,
-                    #874bd1 0%,
-                    #7134b5 100%
-                );
+            -webkit-tap-highlight-color:
+                transparent;
 
-            color: white;
-
-            text-decoration: none;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 15px;
-
-            font-weight: 400;
-
-            letter-spacing: 0.2px;
-
-            box-shadow:
-                0 3px 7px rgba(43, 15, 75, 0.35);
-
-            transition:
-                transform 0.15s ease,
-                box-shadow 0.15s ease;
         }
 
-        .boton:hover {
-            transform: translateY(-1px);
 
-            box-shadow:
-                0 5px 10px rgba(43, 15, 75, 0.4);
+        /* =====================================
+           ÁREA TRANSPARENTE WHATSAPP
+           
+           TAMPOCO SE VE.
+           ===================================== */
+
+        .boton-whatsapp {
+
+            position: absolute;
+
+            top: 82.2%;
+
+            left: 30%;
+
+            width: 40%;
+
+            height: 5.5%;
+
+            z-index: 10;
+
+            display: block;
+
+            background: transparent;
+
+            border: none;
+
+            cursor: pointer;
+
+            -webkit-tap-highlight-color:
+                transparent;
+
         }
 
-        .boton:active {
-            transform: scale(0.97);
-        }
 
-        /* ICONOS */
-
-        .icono {
-            width: 25px;
-            height: 25px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 24px;
-
-            line-height: 1;
-        }
-
-        /* Ajuste específico del corazón */
-
-        .icono-corazon {
-            font-size: 25px;
-            font-family: Arial, sans-serif;
-        }
-
-        /* TEXTO DE LOS BOTONES */
-
-        .texto-boton {
-            white-space: nowrap;
-        }
-
-        /* MÓVILES */
+        /* =====================================
+           TELÉFONOS PEQUEÑOS
+           ===================================== */
 
         @media (max-width: 500px) {
 
-            .zona-invitados {
-                top: 58.5%;
-                padding: 0 12px;
-            }
-
             .nombre-invitado {
-                font-size: clamp(18px, 4.8vw, 26px);
+
+                top: 67.3%;
+
+                left: 3%;
+
+                width: 94%;
+
+                font-size:
+                    clamp(
+                        17px,
+                        4.5vw,
+                        26px
+                    );
+
             }
 
-            .botones {
-                margin-top: 62px;
-                gap: 10px;
+
+            .boton-maps {
+
+                top: 76.1%;
+
+                left: 29%;
+
+                width: 42%;
+
+                height: 5.7%;
+
             }
 
-            .boton {
-                width: 220px;
-                height: 55px;
 
-                font-size: 14px;
+            .boton-whatsapp {
+
+                top: 82.1%;
+
+                left: 29%;
+
+                width: 42%;
+
+                height: 5.7%;
+
             }
+
         }
 
-        /* PANTALLAS MUY PEQUEÑAS */
+
+        /* =====================================
+           TELÉFONOS MUY PEQUEÑOS
+           ===================================== */
 
         @media (max-width: 360px) {
 
-            .boton {
-                width: 205px;
-                height: 52px;
-
-                font-size: 13px;
-            }
-
             .nombre-invitado {
-                font-size: 18px;
+
+                font-size: 17px;
+
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+
     <main class="invitacion">
 
-        <!-- IMAGEN PRINCIPAL -->
+
+        <!-- =================================
+             IMAGEN COMPLETA
+             ================================= -->
+
         <img
             src="Invitacion.png"
-            alt="Invitación Baby Shower Ana Sofía"
-            class="imagen-invitacion"
+            alt="Baby Shower Ana Sofía"
+            class="imagen"
         >
 
 
-        <!-- NOMBRE PERSONALIZADO -->
+        <!-- =================================
+             NOMBRE PERSONALIZADO
+             
+             NO HAY "CON CARIÑO PARA:"
+             ================================= -->
 
-        <section class="zona-invitados">
-
-            <div
-                id="nombreInvitado"
-                class="nombre-invitado">
-            </div>
-
-
-            <!-- BOTONES -->
-
-            <div class="botones">
-
-                <!-- GOOGLE MAPS -->
-
-                <a
-                    class="boton"
-                    href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <span class="icono">📍</span>
-
-                    <span class="texto-boton">
-                        VER UBICACIÓN
-                    </span>
-
-                </a>
+        <div
+            id="nombreInvitado"
+            class="nombre-invitado">
+        </div>
 
 
-                <!-- WHATSAPP -->
+        <!-- =================================
+             BOTÓN INVISIBLE SOBRE
+             EL BOTÓN ORIGINAL
+             ================================= -->
 
-                <a
-                    class="boton"
-                    href="https://wa.me/573142999978"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+        <a
+            class="boton-maps"
+            href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver ubicación">
+        </a>
 
-                    <span
-                        class="icono icono-corazon">
-                        ♡
-                    </span>
 
-                    <span class="texto-boton">
-                        CONFIRMAR ASISTENCIA
-                    </span>
+        <!-- =================================
+             BOTÓN INVISIBLE SOBRE
+             EL BOTÓN ORIGINAL
+             ================================= -->
 
-                </a>
+        <a
+            class="boton-whatsapp"
+            href="https://wa.me/573142999978"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Confirmar asistencia">
+        </a>
 
-            </div>
-
-        </section>
 
     </main>
 
 
     <script>
 
-        /*
-         * PERSONALIZACIÓN DEL INVITADO
-         *
-         * Ejemplo:
-         *
-         * https://srobledog97.github.io/?invitado=Familia%20Montoya%20Agudelo
-         *
-         */
+
+        /* =====================================
+           OBTENER INVITADO DESDE LA URL
+           ===================================== */
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
 
 
-        function obtenerInvitado() {
-
-            const parametros =
-                new URLSearchParams(
-                    window.location.search
-                );
-
-            let invitado =
-                parametros.get("invitado");
+        let invitado =
+            parametros.get("invitado");
 
 
-            if (!invitado) {
+        const elementoNombre =
+            document.getElementById(
+                "nombreInvitado"
+            );
 
-                return "";
 
-            }
+        /* =====================================
+           SI EXISTE INVITADO
+           ===================================== */
+
+        if (invitado) {
 
 
             /*
-             * Cambiar automáticamente
+             * Decodificar caracteres especiales
+             */
+
+            invitado =
+                decodeURIComponent(
+                    invitado
+                );
+
+
+            /*
+             * Cambiar:
              *
-             * Familia → Flia.
+             * Familia Montoya Agudelo
+             *
+             * por:
+             *
+             * Flia. Montoya Agudelo
              */
 
             invitado =
@@ -363,34 +404,31 @@
                 );
 
 
-            return invitado.trim();
+            /*
+             * Mostrar nombre
+             */
 
-        }
+            elementoNombre.textContent =
+                invitado.trim();
 
-
-        const invitado =
-            obtenerInvitado();
-
-
-        const nombre =
-            document.getElementById(
-                "nombreInvitado"
-            );
-
-
-        if (invitado) {
-
-            nombre.textContent =
-                invitado;
 
         } else {
 
-            nombre.style.display =
+
+            /*
+             * Si no hay invitado,
+             * no mostrar ningún texto.
+             */
+
+            elementoNombre.style.display =
                 "none";
 
         }
 
+
     </script>
 
+
 </body>
+
 </html>
