@@ -374,23 +374,90 @@
 
 
             .icono {
+/* ===== BOTONES DE LA INVITACIÓN ===== */
 
-                font-size: 19px;
+.buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 6.5%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 20;
+}
 
-            }
+.btn {
+    width: 225px;
+    height: 54px;
+    border: none;
+    border-radius: 30px;
 
-        }
+    background: linear-gradient(
+        180deg,
+        #9148e8 0%,
+        #7030c5 100%
+    );
 
-    </style>
+    color: white;
+    text-decoration: none;
 
-</head>
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 
-<body>
+    box-shadow:
+        0 4px 8px rgba(55, 15, 100, 0.30),
+        inset 0 1px 2px rgba(255,255,255,0.35);
 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    <main class="invitacion">
+    white-space: nowrap;
+    box-sizing: border-box;
+}
 
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 6px 12px rgba(55, 15, 100, 0.35),
+        inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn .icon {
+    font-size: 25px;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+/* En celulares */
+@media (max-width: 600px) {
+
+    .buttons {
+        bottom: 6.5%;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 225px;
+        height: 53px;
+        font-size: 16px;
+    }
+
+    .btn .icon {
+        font-size: 24px;
+        margin-right: 9px;
+    }
+}
 
         <!-- ========================================
              IMAGEN PRINCIPAL
