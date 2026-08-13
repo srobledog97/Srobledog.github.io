@@ -1,535 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
 
-    <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <meta name="viewport"
-          content="width=device-width,
-                   initial-scale=1.0,
-                   maximum-scale=1.0,
-                   user-scalable=no">
+  <title>Baby Shower Ana Sofía 💜</title>
 
-    <title>Baby Shower Ana Sofía 💜</title>
+  <!-- Vista previa al compartir -->
+  <meta property="og:title" content="Baby Shower Ana Sofía 💜">
+  <meta property="og:description" content="Tenemos una invitación muy especial para ti">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://srobledog97.github.io/">
+  <meta property="og:image" content="https://srobledog97.github.io/Invitacion.png">
 
-    <meta name="description"
-          content="Invitación Baby Shower Ana Sofía 💜">
+  <style>
 
-    <!-- ==========================================
-         VISTA PREVIA AL COMPARTIR
-    =========================================== -->
+    /* =====================================================
+       CONFIGURACIÓN GENERAL
+       ===================================================== */
 
-    <meta property="og:title"
-          content="Baby Shower Ana Sofía 💜">
-
-    <meta property="og:description"
-          content="Tenemos una invitación muy especial para ti 💜">
-
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:url"
-          content="https://srobledog97.github.io/">
-
-    <meta property="og:image"
-          content="https://srobledog97.github.io/Invitacion.png">
-
-    <meta property="og:image:alt"
-          content="Invitación Baby Shower Ana Sofía">
-
-
-    <style>
-
-        /* ==========================================
-           CONFIGURACIÓN GENERAL
-        =========================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        html {
-            width: 100%;
-            min-height: 100%;
-            background: #10081d;
-        }
-
-
-        body {
-            width: 100%;
-            min-height: 100vh;
-            min-height: 100dvh;
-
-            margin: 0;
-            padding: 0;
-
-            background: #10081d;
-
-            overflow-x: hidden;
-
-            font-family: Arial, sans-serif;
-        }
-
-
-        /* ==========================================
-           CONTENEDOR PRINCIPAL
-        =========================================== */
-
-        .invitacion {
-
-            position: relative;
-
-            width: 100%;
-
-            max-width: 900px;
-
-            margin: 0 auto;
-
-            line-height: 0;
-
-            animation: aparecer 0.8s ease-out;
-
-        }
-
-
-        /* ==========================================
-           IMAGEN ORIGINAL
-        =========================================== */
-
-        .imagen-invitacion {
-
-            display: block;
-
-            width: 100%;
-
-            height: auto;
-
-            max-width: 100%;
-
-            margin: 0;
-
-        }
-
-
-        /* ==========================================
-           CONTENEDOR DE LOS BOTONES
-        =========================================== */
-
-        .botones {
-
-            position: absolute;
-
-            left: 50%;
-
-            bottom: 7.8%;
-
-            transform: translateX(-50%);
-
-            width: 34%;
-
-            min-width: 210px;
-
-            max-width: 330px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 10px;
-
-            line-height: normal;
-
-        }
-
-
-        /* ==========================================
-           BOTONES
-        =========================================== */
-
-        .boton {
-
-            width: 100%;
-
-            min-height: 52px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            padding: 11px 18px;
-
-            border-radius: 30px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    #8e4be0,
-                    #6d2cc4
-                );
-
-            border: 2px solid rgba(255,255,255,0.35);
-
-            box-shadow:
-                0 4px 10px rgba(50,15,80,0.35),
-                inset 0 1px 2px rgba(255,255,255,0.25);
-
-            color: white;
-
-            text-decoration: none;
-
-            font-size: clamp(14px, 1.8vw, 19px);
-
-            font-weight: 500;
-
-            letter-spacing: 0.2px;
-
-            cursor: pointer;
-
-            transition:
-                transform 0.18s ease,
-                box-shadow 0.18s ease,
-                filter 0.18s ease;
-
-        }
-
-
-        .boton:hover {
-
-            filter: brightness(1.08);
-
-            box-shadow:
-                0 6px 14px rgba(50,15,80,0.45),
-                inset 0 1px 2px rgba(255,255,255,0.3);
-
-        }
-
-
-        .boton:active {
-
-            transform: scale(0.97);
-
-        }
-
-
-        /* ==========================================
-           ICONOS
-        =========================================== */
-
-        .icono {
-
-            width: 25px;
-
-            height: 25px;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            font-size: 23px;
-
-            line-height: 1;
-
-        }
-
-
-        /* ==========================================
-           ANIMACIÓN DE LOS BOTONES
-        =========================================== */
-
-        .boton {
-
-            animation: subir 0.8s ease-out 0.4s both;
-
-        }
-
-
-        @keyframes subir {
-
-            from {
-
-                opacity: 0;
-
-                transform: translateY(12px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform: translateY(0);
-
-            }
-
-        }
-
-
-        /* ==========================================
-           ANIMACIÓN DE ENTRADA
-        =========================================== */
-
-        @keyframes aparecer {
-
-            from {
-
-                opacity: 0;
-
-            }
-
-            to {
-
-                opacity: 1;
-
-            }
-
-        }
-
-
-        /* ==========================================
-           CELULARES
-        =========================================== */
-
-        @media (max-width: 600px) {
-
-            .invitacion {
-
-                width: 100%;
-
-            }
-
-
-            .botones {
-
-                width: 34%;
-
-                min-width: 205px;
-
-                max-width: 245px;
-
-                bottom: 7.7%;
-
-                gap: 8px;
-
-            }
-
-
-            .boton {
-
-                min-height: 49px;
-
-                padding: 9px 12px;
-
-                font-size: 14px;
-
-                border-radius: 27px;
-
-            }
-
-
-            .icono {
-
-                width: 23px;
-
-                height: 23px;
-
-                font-size: 21px;
-
-            }
-
-        }
-
-
-        /* ==========================================
-           TELÉFONOS PEQUEÑOS
-        =========================================== */
-
-        @media (max-width: 380px) {
-
-            .botones {
-
-                min-width: 190px;
-
-                bottom: 7.5%;
-
-            }
-
-
-            .boton {
-
-                min-height: 45px;
-
-                font-size: 13px;
-
-            }
-
-
-            .icono {
-/* ===== BOTONES DE LA INVITACIÓN ===== */
-
-.buttons {
-    position: absolute;
-    left: 50%;
-    bottom: 6.5%;
-    transform: translateX(-50%);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    z-index: 20;
-}
-
-.btn {
-    width: 225px;
-    height: 54px;
-    border: none;
-    border-radius: 30px;
-
-    background: linear-gradient(
-        180deg,
-        #9148e8 0%,
-        #7030c5 100%
-    );
-
-    color: white;
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-
-    box-shadow:
-        0 4px 8px rgba(55, 15, 100, 0.30),
-        inset 0 1px 2px rgba(255,255,255,0.35);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-    white-space: nowrap;
-    box-sizing: border-box;
-}
-
-.btn:hover {
-    transform: scale(1.03);
-    box-shadow:
-        0 6px 12px rgba(55, 15, 100, 0.35),
-        inset 0 1px 2px rgba(255,255,255,0.4);
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.btn .icon {
-    font-size: 25px;
-    margin-right: 10px;
-    line-height: 1;
-}
-
-/* En celulares */
-@media (max-width: 600px) {
-
-    .buttons {
-        bottom: 6.5%;
-        gap: 10px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .btn {
-        width: 225px;
-        height: 53px;
-        font-size: 16px;
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: #10071b;
     }
 
-    .btn .icon {
-        font-size: 24px;
-        margin-right: 9px;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
     }
-}
-
-        <!-- ========================================
-             IMAGEN PRINCIPAL
-             
-             IMPORTANTE:
-             El archivo debe llamarse exactamente:
-
-             Invitacion.png
-        ========================================= -->
-
-        <img
-            src="Invitacion.png"
-            alt="Invitación Baby Shower Ana Sofía"
-            class="imagen-invitacion"
-        >
 
 
-        <!-- ========================================
-             BOTONES
-        ========================================= -->
+    /* =====================================================
+       CONTENEDOR PRINCIPAL
+       ===================================================== */
 
-        <div class="botones">
-
-
-            <!-- ====================================
-                 GOOGLE MAPS
-                 
-                 UBICACIÓN EXACTA PROPORCIONADA
-            ===================================== -->
-
-            <a
-                class="boton"
-                href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver ubicación exacta"
-            >
-
-                <span class="icono">📍</span>
-
-                <span>VER UBICACIÓN</span>
-
-            </a>
+    .invitacion {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 0;
+    }
 
 
-            <!-- ====================================
-                 WHATSAPP
-                 
-                 +57 314 299 9978
-            ===================================== -->
+    /* =====================================================
+       IMAGEN PRINCIPAL
+       ===================================================== */
 
-            <a
-                class="boton"
-                href="https://wa.me/573142999978?text=Hola%20%F0%9F%91%8B%2C%20confirmo%20mi%20asistencia%20al%20Baby%20Shower%20de%20Ana%20Sof%C3%ADa%20%F0%9F%92%9C"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Confirmar asistencia por WhatsApp"
-            >
-
-                <span class="icono">♡</span>
-
-                <span>CONFIRMAR ASISTENCIA</span>
-
-            </a>
+    .imagen-invitacion {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 0;
+    }
 
 
-        </div>
+    /* =====================================================
+       ZONAS INTERACTIVAS
+       
+       IMPORTANTE:
+       Los botones visuales ya están incluidos dentro
+       de Invitacion.png.
+
+       Por eso estas zonas son INVISIBLES.
+       Solo sirven para hacer clic/tocar.
+       ===================================================== */
+
+    .boton-interactivo {
+      position: absolute;
+      display: block;
+
+      /* Invisible */
+      background: transparent;
+      border: none;
+      box-shadow: none;
+
+      /* Elimina cualquier apariencia */
+      color: transparent;
+      text-decoration: none;
+      font-size: 0;
+
+      /* Evita selección */
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+
+      cursor: pointer;
+
+      z-index: 10;
+    }
 
 
-    </main>
+    /* =====================================================
+       BOTÓN VER UBICACIÓN
+       
+       Coincide con el botón morado que está dentro
+       de la imagen.
+       ===================================================== */
 
+    .ubicacion {
+      left: 30%;
+      width: 40%;
+
+      top: 76.5%;
+      height: 6.5%;
+    }
+
+
+    /* =====================================================
+       BOTÓN CONFIRMAR ASISTENCIA
+       ===================================================== */
+
+    .confirmar {
+      left: 30%;
+      width: 40%;
+
+      top: 83%;
+      height: 7%;
+    }
+
+
+    /* =====================================================
+       AJUSTES PARA PANTALLAS PEQUEÑAS
+       ===================================================== */
+
+    @media (max-width: 480px) {
+
+      .ubicacion {
+        left: 29%;
+        width: 42%;
+
+        top: 76.5%;
+        height: 6.5%;
+      }
+
+      .confirmar {
+        left: 29%;
+        width: 42%;
+
+        top: 83%;
+        height: 7%;
+      }
+
+    }
+
+
+    /* =====================================================
+       PANTALLAS MUY PEQUEÑAS
+       ===================================================== */
+
+    @media (max-width: 360px) {
+
+      .ubicacion {
+        left: 27%;
+        width: 46%;
+
+        top: 76.5%;
+        height: 6.5%;
+      }
+
+      .confirmar {
+        left: 27%;
+        width: 46%;
+
+        top: 83%;
+        height: 7%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <main class="invitacion">
+
+    <!-- =================================================
+         IMAGEN DE LA INVITACIÓN
+         ================================================= -->
+
+    <img
+      src="Invitacion.png"
+      alt="Invitación Baby Shower Ana Sofía"
+      class="imagen-invitacion"
+    >
+
+
+    <!-- =================================================
+         BOTÓN INVISIBLE SOBRE "VER UBICACIÓN"
+         ================================================= -->
+
+    <a
+      class="boton-interactivo ubicacion"
+      href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Ver ubicación"
+    >
+      Ver ubicación
+    </a>
+
+
+    <!-- =================================================
+         BOTÓN INVISIBLE SOBRE "CONFIRMAR ASISTENCIA"
+         ================================================= -->
+
+    <a
+      class="boton-interactivo confirmar"
+      href="https://wa.me/573142999978?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Ana%20Sof%C3%ADa%20%F0%9F%92%9C"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Confirmar asistencia por WhatsApp"
+    >
+      Confirmar asistencia
+    </a>
+
+  </main>
+
+
+  <!-- =====================================================
+       PEQUEÑO SCRIPT DE SEGURIDAD
+       ===================================================== -->
+
+  <script>
+
+    // Evita que una pulsación larga sobre la imagen
+    // abra accidentalmente el menú contextual.
+    document.querySelector('.imagen-invitacion')
+      .addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+  </script>
 
 </body>
-
 </html>
