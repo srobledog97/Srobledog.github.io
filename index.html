@@ -9,25 +9,18 @@
           content="width=device-width,
                    initial-scale=1.0,
                    maximum-scale=1.0,
-                   user-scalable=no,
-                   viewport-fit=cover">
+                   user-scalable=no">
 
     <title>Baby Shower Ana Sofía 💜</title>
 
     <meta name="description"
           content="Invitación Baby Shower Ana Sofía">
 
-    <meta property="og:title"
-          content="Baby Shower Ana Sofía 💜">
-
-    <meta property="og:description"
-          content="Invitación especial">
-
     <style>
 
-        /* =====================================
+        /* ==============================
            CONFIGURACIÓN GENERAL
-        ====================================== */
+        =============================== */
 
         * {
             margin: 0;
@@ -35,68 +28,66 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
+        html {
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
             background: #12091d;
         }
 
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+
+            margin: 0;
+            padding: 0;
+
+            background: #12091d;
+
+            overflow-x: hidden;
         }
 
 
-        /* =====================================
-           CONTENEDOR DE LA INVITACIÓN
-        ====================================== */
+        /* ==============================
+           CONTENEDOR
+        =============================== */
 
         .invitacion {
 
             position: relative;
 
-            width: 100vw;
-            height: 100dvh;
+            width: 100%;
+            max-width: 700px;
 
-            overflow: hidden;
+            margin: 0 auto;
 
-            animation: entrada 0.8s ease-out;
+            line-height: 0;
 
         }
 
 
-        /* =====================================
-           IMAGEN
-        ====================================== */
+        /* ==============================
+           IMAGEN ORIGINAL
+        =============================== */
 
         .invitacion img {
 
-            position: absolute;
+            display: block;
 
             width: 100%;
-            height: 100%;
 
-            left: 0;
-            top: 0;
+            height: auto;
 
-            /*
-              Fill permite que la invitación
-              ocupe toda la pantalla.
-            */
+            max-width: 100%;
 
-            object-fit: fill;
-
-            display: block;
+            margin: 0;
 
         }
 
 
-        /* =====================================
-           ZONAS TÁCTILES INVISIBLES
-        ====================================== */
+        /* ==============================
+           ZONAS INVISIBLES
+        =============================== */
 
         .zona-boton {
 
@@ -106,16 +97,7 @@
 
             transform: translateX(-50%);
 
-            z-index: 10;
-
             display: block;
-
-            /*
-              IMPORTANTE:
-              El botón es transparente.
-              El diseño que ves pertenece
-              directamente a la imagen.
-            */
 
             background: transparent;
 
@@ -123,117 +105,93 @@
 
             outline: none;
 
-            -webkit-tap-highlight-color: transparent;
+            z-index: 20;
 
-            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
 
         }
 
 
-        /* =====================================
-           BOTÓN VER UBICACIÓN
-        ====================================== */
+        /* ==============================
+           VER UBICACIÓN
+           
+           Esta zona se coloca encima
+           del botón que ya existe
+           dentro de la imagen.
+        =============================== */
 
         .ubicacion {
 
-            width: 34%;
+            width: 46%;
 
-            height: 5.3%;
+            height: 5.8%;
 
-            bottom: 14.3%;
+            bottom: 14.2%;
 
         }
 
 
-        /* =====================================
-           BOTÓN CONFIRMAR ASISTENCIA
-        ====================================== */
+        /* ==============================
+           CONFIRMAR ASISTENCIA
+        =============================== */
 
         .confirmar {
 
-            width: 34%;
+            width: 46%;
 
-            height: 5.3%;
+            height: 5.8%;
 
-            bottom: 8.3%;
+            bottom: 7.8%;
 
         }
 
 
-        /* =====================================
-           EFECTO AL TOCAR
-        ====================================== */
+        /* ==============================
+           EFECTO TÁCTIL
+        =============================== */
 
         .zona-boton:active {
 
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.06);
 
-            border-radius: 40px;
+            border-radius: 50px;
 
         }
 
 
-        /* =====================================
-           ANIMACIÓN DE ENTRADA
-        ====================================== */
+        /* ==============================
+           ANIMACIÓN SUAVE
+        =============================== */
 
-        @keyframes entrada {
+        .invitacion {
+
+            animation: aparecer 0.8s ease-out;
+
+        }
+
+
+        @keyframes aparecer {
 
             from {
-
                 opacity: 0;
-
-                transform: scale(0.98);
-
             }
 
             to {
-
                 opacity: 1;
-
-                transform: scale(1);
-
             }
 
         }
 
 
-        /* =====================================
-           PANTALLAS MUY PEQUEÑAS
-        ====================================== */
+        /* ==============================
+           CELULARES
+        =============================== */
 
-        @media (max-height: 650px) {
+        @media (max-width: 700px) {
 
-            .ubicacion {
+            .invitacion {
 
-                bottom: 14.2%;
-
-            }
-
-            .confirmar {
-
-                bottom: 8.2%;
-
-            }
-
-        }
-
-
-        /* =====================================
-           PANTALLAS ALTAS
-        ====================================== */
-
-        @media (min-height: 850px) {
-
-            .ubicacion {
-
-                bottom: 14.4%;
-
-            }
-
-            .confirmar {
-
-                bottom: 8.4%;
+                width: 100%;
 
             }
 
@@ -250,19 +208,19 @@
     <main class="invitacion">
 
 
-        <!-- =================================
-             IMAGEN ORIGINAL
-        ================================== -->
+        <!-- ==================================
+             IMAGEN ORIGINAL DE LA INVITACIÓN
+        =================================== -->
 
         <img
             src="Invitacion.png"
-            alt="Invitación Baby Shower Ana Sofía"
+            alt="Baby Shower Ana Sofía"
         >
 
 
-        <!-- =================================
-             ÁREA INVISIBLE GOOGLE MAPS
-        ================================== -->
+        <!-- ==================================
+             ZONA INVISIBLE GOOGLE MAPS
+        =================================== -->
 
         <a
             class="zona-boton ubicacion"
@@ -273,9 +231,9 @@
         ></a>
 
 
-        <!-- =================================
-             ÁREA INVISIBLE WHATSAPP
-        ================================== -->
+        <!-- ==================================
+             ZONA INVISIBLE WHATSAPP
+        =================================== -->
 
         <a
             class="zona-boton confirmar"
