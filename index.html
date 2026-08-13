@@ -1,248 +1,485 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
 
-  <title>Baby Shower Ana Sofía 💜</title>
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
 
-  <!-- Vista previa al compartir -->
-  <meta property="og:title" content="Baby Shower Ana Sofía 💜">
-  <meta property="og:description" content="Tenemos una invitación muy especial para ti">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://srobledog97.github.io/">
-  <meta property="og:image" content="https://srobledog97.github.io/Invitacion.png">
+    <title>Baby Shower Ana Sofía 💜</title>
 
-  <style>
+    <meta name="description"
+          content="Invitación Baby Shower Ana Sofía 💜">
 
-    /* =====================================================
-       CONFIGURACIÓN GENERAL
-       ===================================================== */
+    <!-- ==========================================
+         VISTA PREVIA AL COMPARTIR
+    =========================================== -->
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta property="og:title"
+          content="Baby Shower Ana Sofía 💜">
 
-    html,
-    body {
-      width: 100%;
-      min-height: 100%;
-      background: #10071b;
-    }
+    <meta property="og:description"
+          content="Tenemos una invitación muy especial para ti 💜">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
-    }
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://srobledog97.github.io/">
+
+    <meta property="og:image"
+          content="https://srobledog97.github.io/Invitacion.png">
+
+    <meta property="og:image:alt"
+          content="Invitación Baby Shower Ana Sofía">
 
 
-    /* =====================================================
-       CONTENEDOR PRINCIPAL
-       ===================================================== */
+    <style>
 
-    .invitacion {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 0;
-    }
+        /* ==========================================
+           CONFIGURACIÓN GENERAL
+        =========================================== */
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* =====================================================
-       IMAGEN PRINCIPAL
-       ===================================================== */
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            background: #10071b;
+        }
 
-    .imagen-invitacion {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 0;
-    }
-
-
-    /* =====================================================
-       ZONAS INTERACTIVAS
-       
-       IMPORTANTE:
-       Los botones visuales ya están incluidos dentro
-       de Invitacion.png.
-
-       Por eso estas zonas son INVISIBLES.
-       Solo sirven para hacer clic/tocar.
-       ===================================================== */
-
-    .boton-interactivo {
-      position: absolute;
-      display: block;
-
-      /* Invisible */
-      background: transparent;
-      border: none;
-      box-shadow: none;
-
-      /* Elimina cualquier apariencia */
-      color: transparent;
-      text-decoration: none;
-      font-size: 0;
-
-      /* Evita selección */
-      -webkit-tap-highlight-color: transparent;
-      outline: none;
-
-      cursor: pointer;
-
-      z-index: 10;
-    }
+        body {
+            overflow-x: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
 
-    /* =====================================================
-       BOTÓN VER UBICACIÓN
-       
-       Coincide con el botón morado que está dentro
-       de la imagen.
-       ===================================================== */
+        /* ==========================================
+           CONTENEDOR PRINCIPAL
+        =========================================== */
 
-    .ubicacion {
-      left: 30%;
-      width: 40%;
-
-      top: 76.5%;
-      height: 6.5%;
-    }
+        .invitacion {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 0;
+        }
 
 
-    /* =====================================================
-       BOTÓN CONFIRMAR ASISTENCIA
-       ===================================================== */
+        /* ==========================================
+           IMAGEN ORIGINAL
+        =========================================== */
 
-    .confirmar {
-      left: 30%;
-      width: 40%;
-
-      top: 83%;
-      height: 7%;
-    }
-
-
-    /* =====================================================
-       AJUSTES PARA PANTALLAS PEQUEÑAS
-       ===================================================== */
-
-    @media (max-width: 480px) {
-
-      .ubicacion {
-        left: 29%;
-        width: 42%;
-
-        top: 76.5%;
-        height: 6.5%;
-      }
-
-      .confirmar {
-        left: 29%;
-        width: 42%;
-
-        top: 83%;
-        height: 7%;
-      }
-
-    }
+        .imagen-invitacion {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
 
 
-    /* =====================================================
-       PANTALLAS MUY PEQUEÑAS
-       ===================================================== */
+        /* ==========================================
+           NOMBRE DEL INVITADO
+        =========================================== */
 
-    @media (max-width: 360px) {
+        .nombre-invitado {
 
-      .ubicacion {
-        left: 27%;
-        width: 46%;
+            position: absolute;
 
-        top: 76.5%;
-        height: 6.5%;
-      }
+            /*
+             * Esta posición es provisional.
+             * Después de ver la prueba podemos
+             * moverla unos píxeles hasta que quede
+             * exactamente donde queremos.
+             */
 
-      .confirmar {
-        left: 27%;
-        width: 46%;
+            left: 50%;
+            top: 64.5%;
 
-        top: 83%;
-        height: 7%;
-      }
+            transform: translateX(-50%);
 
-    }
+            width: 80%;
 
-  </style>
+            text-align: center;
+
+            color: #6d4382;
+
+            font-family: Georgia,
+                         "Times New Roman",
+                         serif;
+
+            font-size: clamp(18px, 4.2vw, 30px);
+
+            font-weight: bold;
+
+            line-height: 1.2;
+
+            text-shadow:
+                0 1px 1px rgba(255,255,255,0.6);
+
+            z-index: 15;
+
+            /*
+             * Inicialmente oculto hasta que
+             * JavaScript encuentre el nombre.
+             */
+
+            opacity: 0;
+
+            transition: opacity 0.5s ease;
+
+        }
+
+
+        .nombre-invitado.visible {
+            opacity: 1;
+        }
+
+
+        /* ==========================================
+           TEXTO "CON CARIÑO PARA"
+        =========================================== */
+
+        .texto-invitado {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-family: Arial,
+                         Helvetica,
+                         sans-serif;
+
+            font-size: clamp(11px, 2.5vw, 15px);
+
+            font-weight: normal;
+
+            letter-spacing: 1px;
+
+            color: #8a668f;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* ==========================================
+           ZONAS INTERACTIVAS
+           
+           Los botones visuales ya están incluidos
+           dentro de Invitacion.png.
+           
+           Estas zonas son invisibles.
+        =========================================== */
+
+        .boton-interactivo {
+
+            position: absolute;
+
+            display: block;
+
+            background: transparent;
+
+            border: none;
+
+            box-shadow: none;
+
+            color: transparent;
+
+            text-decoration: none;
+
+            font-size: 0;
+
+            -webkit-tap-highlight-color: transparent;
+
+            outline: none;
+
+            cursor: pointer;
+
+            z-index: 20;
+
+        }
+
+
+        /* ==========================================
+           VER UBICACIÓN
+        =========================================== */
+
+        .ubicacion {
+
+            left: 30%;
+
+            width: 40%;
+
+            top: 76.5%;
+
+            height: 6.5%;
+
+        }
+
+
+        /* ==========================================
+           CONFIRMAR ASISTENCIA
+        =========================================== */
+
+        .confirmar {
+
+            left: 30%;
+
+            width: 40%;
+
+            top: 83%;
+
+            height: 7%;
+
+        }
+
+
+        /* ==========================================
+           TELÉFONOS
+        =========================================== */
+
+        @media (max-width: 480px) {
+
+            .ubicacion {
+
+                left: 29%;
+
+                width: 42%;
+
+                top: 76.5%;
+
+                height: 6.5%;
+
+            }
+
+            .confirmar {
+
+                left: 29%;
+
+                width: 42%;
+
+                top: 83%;
+
+                height: 7%;
+
+            }
+
+        }
+
+
+        @media (max-width: 360px) {
+
+            .ubicacion {
+
+                left: 27%;
+
+                width: 46%;
+
+            }
+
+            .confirmar {
+
+                left: 27%;
+
+                width: 46%;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
-  <main class="invitacion">
 
-    <!-- =================================================
-         IMAGEN DE LA INVITACIÓN
-         ================================================= -->
-
-    <img
-      src="Invitacion.png"
-      alt="Invitación Baby Shower Ana Sofía"
-      class="imagen-invitacion"
-    >
+    <main class="invitacion">
 
 
-    <!-- =================================================
-         BOTÓN INVISIBLE SOBRE "VER UBICACIÓN"
-         ================================================= -->
+        <!-- ========================================
+             IMAGEN PRINCIPAL
+        ========================================= -->
 
-    <a
-      class="boton-interactivo ubicacion"
-      href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Ver ubicación"
-    >
-      Ver ubicación
-    </a>
+        <img
+            src="Invitacion.png"
+            alt="Invitación Baby Shower Ana Sofía"
+            class="imagen-invitacion"
+        >
 
 
-    <!-- =================================================
-         BOTÓN INVISIBLE SOBRE "CONFIRMAR ASISTENCIA"
-         ================================================= -->
+        <!-- ========================================
+             NOMBRE PERSONALIZADO
+        ========================================= -->
 
-    <a
-      class="boton-interactivo confirmar"
-      href="https://wa.me/573142999978?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Ana%20Sof%C3%ADa%20%F0%9F%92%9C"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Confirmar asistencia por WhatsApp"
-    >
-      Confirmar asistencia
-    </a>
-
-  </main>
+        <div
+            id="nombreInvitado"
+            class="nombre-invitado"
+        ></div>
 
 
-  <!-- =====================================================
-       PEQUEÑO SCRIPT DE SEGURIDAD
-       ===================================================== -->
+        <!-- ========================================
+             BOTÓN INVISIBLE - GOOGLE MAPS
+        ========================================= -->
 
-  <script>
+        <a
+            class="boton-interactivo ubicacion"
+            href="https://maps.app.goo.gl/BGQ9y5GhA3HxYcNT8"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver ubicación"
+        >
+            Ver ubicación
+        </a>
 
-    // Evita que una pulsación larga sobre la imagen
-    // abra accidentalmente el menú contextual.
-    document.querySelector('.imagen-invitacion')
-      .addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-      });
 
-  </script>
+        <!-- ========================================
+             BOTÓN INVISIBLE - WHATSAPP
+        ========================================= -->
+
+        <a
+            id="botonWhatsApp"
+            class="boton-interactivo confirmar"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Confirmar asistencia"
+        >
+            Confirmar asistencia
+        </a>
+
+
+    </main>
+
+
+    <script>
+
+        /* ==================================================
+           PERSONALIZACIÓN DE LA INVITACIÓN
+        ================================================== */
+
+        const parametros =
+            new URLSearchParams(window.location.search);
+
+
+        /* ==================================================
+           OBTENER EL NOMBRE DESDE ?para=
+        ================================================== */
+
+        const nombre =
+            parametros.get("para");
+
+
+        const elementoNombre =
+            document.getElementById("nombreInvitado");
+
+
+        const botonWhatsApp =
+            document.getElementById("botonWhatsApp");
+
+
+        /* ==================================================
+           SI EXISTE UN NOMBRE
+        ================================================== */
+
+        if (nombre && nombre.trim() !== "") {
+
+            /*
+             * Decodificamos correctamente caracteres
+             * como á, é, í, ó, ú y ñ.
+             */
+
+            const nombreDecodificado =
+                nombre.trim();
+
+
+            /*
+             * Mostramos el nombre.
+             */
+
+            elementoNombre.innerHTML =
+                '<span class="texto-invitado">' +
+                'Con cariño para' +
+                '</span>' +
+                nombreDecodificado;
+
+
+            elementoNombre.classList.add("visible");
+
+
+            /*
+             * Mensaje personalizado de WhatsApp.
+             */
+
+            const mensaje =
+                "Hola 👋, confirmo mi asistencia al Baby Shower de Ana Sofía 💜. " +
+                "Invitación para: " +
+                nombreDecodificado;
+
+
+            /*
+             * Construimos el enlace de WhatsApp.
+             */
+
+            botonWhatsApp.href =
+                "https://wa.me/573142999978?text=" +
+                encodeURIComponent(mensaje);
+
+        }
+
+
+        /* ==================================================
+           SI NO HAY NOMBRE
+        ================================================== */
+
+        else {
+
+            /*
+             * Mensaje genérico.
+             */
+
+            const mensaje =
+                "Hola 👋, quiero confirmar mi asistencia al Baby Shower de Ana Sofía 💜";
+
+
+            botonWhatsApp.href =
+                "https://wa.me/573142999978?text=" +
+                encodeURIComponent(mensaje);
+
+        }
+
+
+        /* ==================================================
+           EVITAR MENÚ CONTEXTUAL SOBRE LA INVITACIÓN
+        ================================================== */
+
+        document
+            .querySelector(".imagen-invitacion")
+            .addEventListener(
+                "contextmenu",
+                function(event) {
+
+                    event.preventDefault();
+
+                }
+            );
+
+    </script>
+
 
 </body>
+
 </html>
